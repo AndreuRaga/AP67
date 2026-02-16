@@ -45,6 +45,6 @@ class EntidadEstelar {
     }
 
     public function reaccionar() {
-        return "Se ha encontrado una entidad estelar: " . $this->nombre . " del planeta " . $this->planetaOrigen . " con un nivel de estabilidad de " . $this->nivelEstabilidad . ".";
+        return "La entidad estelar reacciona.";
     }
 }
