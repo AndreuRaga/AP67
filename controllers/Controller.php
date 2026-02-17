@@ -7,9 +7,30 @@ class Controller {
     }
 
     public function index() {
+        //Paginación de formas de vida
         $formasDeVida = $this->gestor->exploradorFormasDeVida();
+        $totalFormasDeVida = count($formasDeVida);
+        $formasDeVidaPorPagina = 3;
+        $totalPaginasFormasDeVida = ceil($totalFormasDeVida / $formasDeVidaPorPagina);
+        $paginaActualFormasDeVida = $_GET['pActualFormasDeVida'] ?? 1;
+        $formasDeVidaAcortadas = array_slice($formasDeVida, ($paginaActualFormasDeVida - 1) * $formasDeVidaPorPagina, $formasDeVidaPorPagina);
+
+        //Paginación de minerales raros
         $mineralesRaros = $this->gestor->exploradorMineralesRaros();
+        $totalMineralesRaros = count($mineralesRaros);
+        $mineralesRarosPorPagina = 3;
+        $totalPaginasMineralesRaros = ceil($totalMineralesRaros / $mineralesRarosPorPagina);
+        $paginaActualMineralesRaros = $_GET['pActualMineralesRaros'] ?? 1;
+        $mineralesRarosAcortados = array_slice($mineralesRaros, ($paginaActualMineralesRaros - 1) * $mineralesRarosPorPagina, $mineralesRarosPorPagina);
+
+        //Paginación de artefactos antiguos
         $artefactosAntiguos = $this->gestor->exploradorArtefactosAntiguos();
+        $totalArtefactosAntiguos = count($artefactosAntiguos);
+        $artefactosAntiguosPorPagina = 3;
+        $totalPaginasArtefactosAntiguos = ceil($totalArtefactosAntiguos / $artefactosAntiguosPorPagina);
+        $paginaActualArtefactosAntiguos = $_GET['pActualArtefactosAntiguos'] ?? 1;
+        $artefactosAntiguosAcortados = array_slice($artefactosAntiguos, ($paginaActualArtefactosAntiguos - 1) * $artefactosAntiguosPorPagina, $artefactosAntiguosPorPagina);
+
         include 'views/explorador.php';
     }
 

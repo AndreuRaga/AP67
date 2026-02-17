@@ -19,7 +19,7 @@
             <th>Acciones</th>
         </tr>
 
-        <?php foreach ($formasDeVida as $formaDeVida): ?>
+        <?php foreach ($formasDeVidaAcortadas as $formaDeVida): ?>
             <tr>
                 <td><?php echo $formaDeVida->getId(); ?></td>
                 <td><?php echo $formaDeVida->getNombre(); ?></td>
@@ -45,6 +45,9 @@
             </tr>
         <?php endforeach; ?>
     </table>
+    <?php for ($i = 1; $i <= $totalPaginasFormasDeVida; $i++): ?>
+        <a href="index.php?accion=index&pActualFormasDeVida=<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
 
     <h3>Minerales raros</h3>
     <table border="1" cellpadding="10">
@@ -57,7 +60,7 @@
             <th>Acciones</th>
         </tr>
 
-        <?php foreach ($mineralesRaros as $mineralRaro): ?>
+        <?php foreach ($mineralesRarosAcortados as $mineralRaro): ?>
             <tr>
                 <td><?php echo $mineralRaro->getId(); ?></td>
                 <td><?php echo $mineralRaro->getNombre(); ?></td>
@@ -83,6 +86,9 @@
             </tr>
         <?php endforeach; ?>
     </table>
+    <?php for ($i = 1; $i <= $totalPaginasMineralesRaros; $i++): ?>
+        <a href="index.php?accion=index&pActualMineralesRaros=<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
 
     <h3>Artefactos antiguos</h3>
     <table border="1" cellpadding="10">
@@ -95,7 +101,7 @@
             <th>Acciones</th>
         </tr>
 
-        <?php foreach ($artefactosAntiguos as $artefactoAntiguo): ?>
+        <?php foreach ($artefactosAntiguosAcortados as $artefactoAntiguo): ?>
             <tr>
                 <td><?php echo $artefactoAntiguo->getId(); ?></td>
                 <td><?php echo $artefactoAntiguo->getNombre(); ?></td>
@@ -121,5 +127,8 @@
             </tr>
         <?php endforeach; ?>
     </table>
+    <?php for ($i = 1; $i <= $totalPaginasArtefactosAntiguos; $i++): ?>
+        <a href="index.php?accion=index&pActualArtefactosAntiguos=<?php echo $i; ?>"><?php echo $i; ?></a>
+    <?php endfor; ?>
 </body>
 </html>
