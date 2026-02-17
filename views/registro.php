@@ -21,7 +21,7 @@
         <br>
 
         Nivel de estabilidad:
-        <input type="number" name="nivelEstabilidad" required>
+        <input type="number" name="nivelEstabilidad" max="10" required>
         <br>
 
         Dieta:

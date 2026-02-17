@@ -34,7 +34,7 @@
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $formaDeVida->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:
-                        <input type="number" name="nivelEstabilidad" value="<?php echo $formaDeVida->getNivelEstabilidad(); ?>" required>
+                        <input type="number" name="nivelEstabilidad" max="10" value="<?php echo $formaDeVida->getNivelEstabilidad(); ?>" required>
                         Dieta:
                         <input type="text" name="dieta" value="<?php echo $formaDeVida->getDieta(); ?>" required>
                         <input type="submit" value="Guardar">
@@ -75,7 +75,7 @@
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $mineralRaro->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:
-                        <input type="number" name="nivelEstabilidad" value="<?php echo $mineralRaro->getNivelEstabilidad(); ?>" required>
+                        <input type="number" name="nivelEstabilidad" max="10" value="<?php echo $mineralRaro->getNivelEstabilidad(); ?>" required>
                         Dureza:
                         <input type="number" name="dureza" value="<?php echo $mineralRaro->getDureza(); ?>" required>
                         <input type="submit" value="Guardar">
@@ -116,7 +116,7 @@
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $artefactoAntiguo->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:
-                        <input type="number" name="nivelEstabilidad" value="<?php echo $artefactoAntiguo->getNivelEstabilidad(); ?>" required>
+                        <input type="number" name="nivelEstabilidad" max="10" value="<?php echo $artefactoAntiguo->getNivelEstabilidad(); ?>" required>
                         Antigüedad:
                         <input type="number" name="antiguedad" value="<?php echo $artefactoAntiguo->getAntiguedad(); ?>" required>
                         <input type="submit" value="Guardar">
