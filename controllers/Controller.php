@@ -57,6 +57,12 @@ class Controller {
 
     public function editarMineralRaro() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $nombre = $_POST['nombre'];
+            $planetaOrigen = $_POST['planetaOrigen'];
+            $nivelEstabilidad = $_POST['nivelEstabilidad'];
+            $dureza = $_POST['dureza'];
+            $this->gestor->modificacionMineralRaro($id, $nombre, $planetaOrigen, $nivelEstabilidad, $dureza);
             header("Location: index.php");
             exit();
         }
@@ -64,6 +70,12 @@ class Controller {
 
     public function editarArtefactoAntiguo() {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $nombre = $_POST['nombre'];
+            $planetaOrigen = $_POST['planetaOrigen'];
+            $nivelEstabilidad = $_POST['nivelEstabilidad'];
+            $antiguedad = $_POST['antiguedad'];
+            $this->gestor->modificacionArtefactoAntiguo($id, $nombre, $planetaOrigen, $nivelEstabilidad, $antiguedad);
             header("Location: index.php");
             exit();
         }
