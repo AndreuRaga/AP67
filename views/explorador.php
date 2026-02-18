@@ -46,7 +46,7 @@
         <?php endforeach; ?>
     </table>
     <?php for ($i = 1; $i <= $totalPaginasFormasDeVida; $i++): ?>
-        <a href="index.php?accion=index&pActualFormasDeVida=<?php echo $i; ?>"><?php echo $i; ?></a>
+        <a href="index.php?accion=index&pActualFormasDeVida=<?php echo $i; ?>&pActualMineralesRaros=<?php echo $paginaActualMineralesRaros; ?>&pActualArtefactosAntiguos=<?php echo $paginaActualArtefactosAntiguos; ?>"><?php echo $i; ?></a>
     <?php endfor; ?>
 
     <h3>Minerales raros</h3>
@@ -87,7 +87,7 @@
         <?php endforeach; ?>
     </table>
     <?php for ($i = 1; $i <= $totalPaginasMineralesRaros; $i++): ?>
-        <a href="index.php?accion=index&pActualMineralesRaros=<?php echo $i; ?>"><?php echo $i; ?></a>
+        <a href="index.php?accion=index&pActualFormasDeVida=<?php echo $paginaActualFormasDeVida; ?>&pActualMineralesRaros=<?php echo $i; ?>&pActualArtefactosAntiguos=<?php echo $paginaActualArtefactosAntiguos; ?>"><?php echo $i; ?></a>
     <?php endfor; ?>
 
     <h3>Artefactos antiguos</h3>
@@ -128,7 +128,7 @@
         <?php endforeach; ?>
     </table>
     <?php for ($i = 1; $i <= $totalPaginasArtefactosAntiguos; $i++): ?>
-        <a href="index.php?accion=index&pActualArtefactosAntiguos=<?php echo $i; ?>"><?php echo $i; ?></a>
+        <a href="index.php?accion=index&pActualFormasDeVida=<?php echo $paginaActualFormasDeVida; ?>&pActualMineralesRaros=<?php echo $paginaActualMineralesRaros; ?>&pActualArtefactosAntiguos=<?php echo $i; ?>"><?php echo $i; ?></a>
     <?php endfor; ?>
 </body>
 </html>
