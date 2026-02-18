@@ -30,7 +30,7 @@
                     <form method="post" action="index.php?accion=editarFormaDeVida" style="display:inline;">
                         <input type="hidden" name="id" value="<?php echo $formaDeVida->getId(); ?>" required>
                         Nombre:
-                        <input type="text" name="nombre" value="<?php echo $formaDeVida->getNombre(); ?>" required>
+                        <input type="text" name="nombre" value="<?php echo $formaDeVida->getNombre(); ?>" pattern=".*\S.*" title="No puede contener solo espacios en blanco" required>
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $formaDeVida->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:
@@ -75,7 +75,7 @@
                     <form method="post" action="index.php?accion=editarMineralRaro" style="display:inline;">
                         <input type="hidden" name="id" value="<?php echo $mineralRaro->getId(); ?>" required>
                         Nombre:
-                        <input type="text" name="nombre" value="<?php echo $mineralRaro->getNombre(); ?>" required>
+                        <input type="text" name="nombre" value="<?php echo $mineralRaro->getNombre(); ?>" pattern=".*\S.*" title="No puede contener solo espacios en blanco" required>
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $mineralRaro->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:
@@ -116,7 +116,7 @@
                     <form method="post" action="index.php?accion=editarArtefactoAntiguo" style="display:inline;">
                         <input type="hidden" name="id" value="<?php echo $artefactoAntiguo->getId(); ?>" required>
                         Nombre:
-                        <input type="text" name="nombre" value="<?php echo $artefactoAntiguo->getNombre(); ?>" required>
+                        <input type="text" name="nombre" value="<?php echo $artefactoAntiguo->getNombre(); ?>" pattern=".*\S.*" title="No puede contener solo espacios en blanco" required>
                         Planeta de origen:
                         <input type="text" name="planetaOrigen" value="<?php echo $artefactoAntiguo->getPlanetaOrigen(); ?>" required>
                         Nivel de estabilidad:

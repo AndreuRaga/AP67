@@ -13,7 +13,7 @@
         <br>
 
         Nombre:
-        <input type="text" name="nombre" required>
+        <input type="text" name="nombre" pattern=".*\S.*" title="No puede contener solo espacios en blanco" required>
         <br>
 
         Planeta de origen:
