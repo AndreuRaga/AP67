@@ -25,7 +25,12 @@
         <br>
 
         Dieta:
-        <input type="text" name="dieta">
+        <!--<input type="text" name="dieta">-->
+        <select name="dieta">
+            <option value="Carbono">Carbono</option>
+            <option value="Silicio">Silicio</option>
+            <option value="Energía">Energía</option>
+        </select>
         <br>
 
         Dureza:

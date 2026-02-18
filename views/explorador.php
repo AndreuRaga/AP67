@@ -36,7 +36,11 @@
                         Nivel de estabilidad:
                         <input type="number" name="nivelEstabilidad" max="10" value="<?php echo $formaDeVida->getNivelEstabilidad(); ?>" required>
                         Dieta:
-                        <input type="text" name="dieta" value="<?php echo $formaDeVida->getDieta(); ?>" required>
+                        <select name="dieta" required>
+                            <option value="Carbono" <?php echo ($formaDeVida->getDieta() == 'Carbono') ? 'selected' : ''; ?>>Carbono</option>
+                            <option value="Silicio" <?php echo ($formaDeVida->getDieta() == 'Silicio') ? 'selected' : ''; ?>>Silicio</option>
+                            <option value="Energía" <?php echo ($formaDeVida->getDieta() == 'Energía') ? 'selected' : ''; ?>>Energía</option>
+                        </select>
                         <input type="submit" value="Guardar">
 
                         <a href="index.php?accion=eliminar&id=<?php echo $formaDeVida->getId(); ?>">Eliminar</a>
